@@ -1,0 +1,14 @@
+{
+  "verified_at": "2026-10-31T17:19:47.724697+00:00",
+  "zenodo_record_id": 14047944,
+  "doi": "10.5281/zenodo.14047944",
+  "title": "StreaksYoloDataset: labeled raw astronomical images for streaks detection",
+  "licence": "cc-by-4.0",
+  "file": "StreaksYoloDataset.zip",
+  "published_size_bytes": 1397179335,
+  "downloaded_size_bytes": 1397179335,
+  "published_md5": "ff4f651b55077a23ebda94c9d157e1b0",
+  "computed_md5": "ff4f651b55077a23ebda94c9d157e1b0",
+  "match": true,
+  "download_url": "https://zenodo.org/records/14047944/files/StreaksYoloDataset.zip?download=1"
+}

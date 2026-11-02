@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-space-950: #05070f;
+  --color-space-900: #0a0f22;
+  --color-space-800: #111a35;
+  --color-space-700: #1b2750;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+html { color-scheme: dark; }
+
+body {
+  background-color: var(--color-space-950);
+  color: #e2e8f0;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Subtle, static starfield: three layers of tiny radial gradients + a soft nebula glow. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, rgba(255,255,255,0.55) 50%, transparent 51%),
+    radial-gradient(1px 1px at 140px 80px, rgba(255,255,255,0.35) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 260px 160px, rgba(186,230,253,0.5) 50%, transparent 51%),
+    radial-gradient(1px 1px at 330px 40px, rgba(255,255,255,0.3) 50%, transparent 51%),
+    radial-gradient(1px 1px at 90px 210px, rgba(255,255,255,0.4) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 400px 260px, rgba(255,255,255,0.25) 50%, transparent 51%),
+    radial-gradient(ellipse 60% 40% at 80% -10%, rgba(34,211,238,0.10), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 0% 100%, rgba(99,102,241,0.10), transparent 60%),
+    linear-gradient(180deg, #070b1a 0%, #05070f 100%);
+  background-size: 460px 300px, 460px 300px, 460px 300px, 460px 300px, 460px 300px, 460px 300px, 100% 100%, 100% 100%, 100% 100%;
+}
+
+.card { @apply rounded-xl border border-white/10 bg-space-900/70 shadow-lg shadow-black/30 backdrop-blur-sm; }
+.panel-title { @apply text-sm font-semibold uppercase tracking-wider text-cyan-300/90; }
+.input { @apply w-full rounded-md border border-white/10 bg-space-950/80 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-cyan-400/60 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 disabled:opacity-50; }
+.btn { @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60 disabled:cursor-not-allowed disabled:opacity-50; }
+.btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60 disabled:cursor-not-allowed disabled:opacity-50 bg-cyan-500 text-space-950 hover:bg-cyan-400; }
+.btn-secondary { @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60 disabled:cursor-not-allowed disabled:opacity-50 border border-white/15 bg-white/5 text-slate-100 hover:bg-white/10; }
+.btn-ghost { @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60 disabled:cursor-not-allowed disabled:opacity-50 text-cyan-300 hover:bg-cyan-400/10; }
+.kbd { @apply rounded border border-white/15 bg-white/5 px-1.5 py-0.5 font-mono text-[11px] text-slate-200; }
+.prose-space h2 { @apply mt-10 mb-3 text-2xl font-semibold text-white; }
+.prose-space h3 { @apply mt-6 mb-2 text-lg font-semibold text-cyan-200; }
+.prose-space p { @apply mb-3 leading-relaxed text-slate-300; }
+.prose-space ul { @apply mb-3 list-disc space-y-1 pl-6 text-slate-300; }
+.prose-space ol { @apply mb-3 list-decimal space-y-1 pl-6 text-slate-300; }
+.prose-space code { @apply rounded bg-white/10 px-1 py-0.5 font-mono text-[0.85em] text-cyan-100; }
+.prose-space table { @apply my-4 w-full text-sm; }
+.prose-space th { @apply border-b border-white/10 px-3 py-2 text-left text-cyan-200; }
+.prose-space td { @apply border-b border-white/5 px-3 py-2 align-top text-slate-300; }

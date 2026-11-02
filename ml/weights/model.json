@@ -1,0 +1,47 @@
+{
+  "format": "ultralytics-yolov8-onnx",
+  "name": "baseline-streaks-20ep",
+  "exported_at": "2026-10-21T15:22:09+00:00",
+  "source_weights": "/app/ml/runs/baseline-streaks-20ep/weights/best.pt",
+  "imgsz": 512,
+  "opset": 12,
+  "classes": [
+    "streak"
+  ],
+  "input": {
+    "name": "images",
+    "shape": [
+      1,
+      3,
+      512,
+      512
+    ],
+    "layout": "NCHW RGB 0-1"
+  },
+  "output": {
+    "layout": "[1, 4 + num_classes, num_anchors] (cx, cy, w, h, class scores)"
+  },
+  "data_origin": "real",
+  "dataset": "StreaksYoloDataset",
+  "metrics_val": {
+    "split": "val",
+    "precision": 0.9082023951129214,
+    "recall": 0.6326530612244898,
+    "f1": 0.7457896496604085,
+    "map50": 0.7069097243658411,
+    "map50_95": 0.5887121195510278,
+    "per_class": {
+      "streak": {
+        "ap50": 0.7069097243658411,
+        "ap": 0.5887121195510278
+      }
+    }
+  },
+  "metrics_test": {
+    "precision": 0.8160317510593232,
+    "recall": 0.8076923076923077,
+    "f1": 0.811840613693977,
+    "map50": 0.8754920526868283,
+    "map50_95": 0.6983936894695539
+  }
+}

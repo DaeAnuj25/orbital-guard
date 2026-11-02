@@ -1,0 +1,35 @@
+{
+  "source_url": "https://zenodo.org/records/14047944/files/StreaksYoloDataset.zip?download=1",
+  "zenodo_record": 14047944,
+  "doi": "10.5281/zenodo.14047944",
+  "licence": "CC BY 4.0",
+  "archive_bytes": 1397179335,
+  "archive_md5_published": "ff4f651b55077a23ebda94c9d157e1b0",
+  "method": "HTTP range requests: ZIP central directory + selected entries only",
+  "samples": [
+    {
+      "zip_entry": "StreaksYoloDataset/test/images/6.jpeg",
+      "image": "test_6.jpeg",
+      "label": "0 0.45078125 0.63671875 0.6265625 0.5484375",
+      "bytes": 658317
+    },
+    {
+      "zip_entry": "StreaksYoloDataset/test/images/60.jpeg",
+      "image": "test_60.jpeg",
+      "label": "0 0.50546875 0.084375 0.9234375 0.065625",
+      "bytes": 654021
+    },
+    {
+      "zip_entry": "StreaksYoloDataset/test/images/601.jpeg",
+      "image": "test_601.jpeg",
+      "label": "0 0.8296875 0.3703125 0.06875 0.48125",
+      "bytes": 607264
+    },
+    {
+      "zip_entry": "StreaksYoloDataset/test/images/602.jpeg",
+      "image": "test_602.jpeg",
+      "label": "0 0.37109375 0.425 0.4921875 0.8125",
+      "bytes": 674344
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "id": "baseline-streaks-4ep",
+  "status": "evaluated",
+  "created_at": "2026-10-21T15:04:10+00:00",
+  "data_origin": "real",
+  "config": {
+    "name": "baseline-streaks-4ep",
+    "model": "yolov8n.pt",
+    "data": "ml/data/streaks/data.yaml",
+    "epochs": 4,
+    "imgsz": 512,
+    "batch": 8,
+    "seed": 42,
+    "device": "cpu",
+    "workers": 2,
+    "optimizer": "auto",
+    "lr0": 0.01,
+    "patience": 15,
+    "mosaic": 1.0,
+    "fliplr": 0.5,
+    "flipud": 0.5,
+    "degrees": 0.0,
+    "scale": 0.5
+  },
+  "environment": {
+    "python": "3.11.2",
+    "platform": "Linux-6.1.158+-x86_64-with-glibc2.36",
+    "cpu_count": 4,
+    "git_commit": null,
+    "torch": "2.14.1+cu130",
+    "cuda_available": false,
+    "ultralytics": "8.3.253"
+  },
+  "dataset": {
+    "name": "StreaksYoloDataset",
+    "data_origin": "real",
+    "licence": "CC BY 4.0",
+    "source_url": "https://doi.org/10.5281/zenodo.14047943",
+    "prepared_at": "2026-10-21T15:04:10+00:00",
+    "source_folder": "/tmp/data/streaks/StreaksYoloDataset",
+    "seed": 42,
+    "split_fractions": [
+      0.7,
+      0.15,
+      0.15
+    ],
+    "limit": 360,
+    "classes": [
+      "streak"
+    ],
+    "counts": {
+      "train": 259,
+      "val": 49,
+      "test": 52
+    },
+    "class_histogram": {
+      "streak": 359
+    },
+    "images_without_labels_skipped": 746,
+    "box_relative_size_median": 0.25247795386429284,
+    "split_digests": {
+      "train": "437638a9c7e4ffec",
+      "val": "c289cfde91199f7a",
+      "test": "444b12410f027823"
+    }
+  },
+  "training": {
+    "elapsed_seconds": 166.2,
+    "epochs_completed": 4,
+    "curves": [
+      {
+        "epoch": 1,
+        "train_box_loss": 2.04706,
+        "train_cls_loss": 3.19152,
+        "train_dfl_loss": 1.84921,
+        "val_box_loss": 2.05667,
+        "val_cls_loss": 3.91378,
+        "val_dfl_loss": 2.11295,
+        "precision": 0.00231,
+        "recall": 0.69388,
+        "map50": 0.30972,
+        "map50_95": 0.19207
+      },
+      {
+        "epoch": 2,
+        "train_box_loss": 1.96714,
+        "train_cls_loss": 2.99019,
+        "train_dfl_loss": 1.75352,
+        "val_box_loss": 1.79952,
+        "val_cls_loss": 3.53502,
+        "val_dfl_loss": 1.75193,
+        "precision": 0.52157,
+        "recall": 0.22449,
+        "map50": 0.28089,
+        "map50_95": 0.15937
+      },
+      {
+        "epoch": 3,
+        "train_box_loss": 1.79282,
+        "train_cls_loss": 2.66137,
+        "train_dfl_loss": 1.65726,
+        "val_box_loss": 1.78446,
+        "val_cls_loss": 3.25975,
+        "val_dfl_loss": 1.68852,
+        "precision": 0.30817,
+        "recall": 0.16327,
+        "map50": 0.24052,
+        "map50_95": 0.15118
+      },
+      {
+        "epoch": 4,
+        "train_box_loss": 1.73552,
+        "train_cls_loss": 2.54211,
+        "train_dfl_loss": 1.64594,
+        "val_box_loss": 1.31461,
+        "val_cls_loss": 2.47469,
+        "val_dfl_loss": 1.3569,
+        "precision": 0.59518,
+        "recall": 0.36735,
+        "map50": 0.43039,
+        "map50_95": 0.30127
+      }
+    ]
+  },
+  "metrics": {
+    "split": "val",
+    "precision": 0.5952911773466683,
+    "recall": 0.3673469387755102,
+    "f1": 0.45433146270849134,
+    "map50": 0.42975076208433477,
+    "map50_95": 0.30120884023388333,
+    "per_class": {
+      "streak": {
+        "ap50": 0.42975076208433477,
+        "ap": 0.30120884023388333
+      }
+    }
+  },
+  "evaluation": {
+    "evaluated_at": "2026-10-21T15:07:09+00:00",
+    "split": "test",
+    "weights": "/app/ml/runs/baseline-streaks/weights/best.pt",
+    "imgsz": 512,
+    "precision": 0.4545253245297559,
+    "recall": 0.5576923076923077,
+    "f1": 0.5008513368516073,
+    "map50": 0.49621487816323395,
+    "map50_95": 0.32466995983732444,
+    "per_class": {
+      "streak": {
+        "ap50": 0.49621487816323395,
+        "ap": 0.32466995983732444
+      }
+    },
+    "failure_analysis": {
+      "method": "greedy IoU>=0.5 matching at conf>=0.25",
+      "images": 52,
+      "recall_by_gt_size": {
+        "small(<16px)": {
+          "total": 0,
+          "detected": 0,
+          "recall": null
+        },
+        "medium(16-48px)": {
+          "total": 1,
+          "detected": 0,
+          "recall": 0.0
+        },
+        "large(>48px)": {
+          "total": 51,
+          "detected": 33,
+          "recall": 0.6471
+        }
+      },
+      "recall_by_class": {
+        "0": {
+          "total": 52,
+          "detected": 33,
+          "recall": 0.6346
+        }
+      },
+      "false_positives_total": 71
+    }
+  },
+  "artifacts": {
+    "weights_best": "/app/ml/runs/baseline-streaks/weights/best.pt",
+    "weights_last": "/app/ml/runs/baseline-streaks/weights/last.pt",
+    "results_csv": "/app/ml/runs/baseline-streaks/results.csv",
+    "onnx": "/app/ml/weights/model.onnx"
+  },
+  "notes": [
+    "Metrics measured by Ultralytics on the validation split; run evaluate.py for held-out test metrics.",
+    "Quick 4-epoch CPU run used to validate the pipeline in the sandbox."
+  ],
+  "started_at": "2026-10-21T15:04:12+00:00",
+  "finished_at": "2026-10-21T15:07:01+00:00"
+}

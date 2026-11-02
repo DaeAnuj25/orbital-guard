@@ -1,0 +1,19 @@
+# Baseline: YOLOv8n fine-tuned from COCO weights on the StreaksYoloDataset subset.
+# Every key can be overridden on the command line: --set epochs=2
+name: baseline-streaks
+model: yolov8n.pt          # pretrained COCO weights are downloaded by Ultralytics on first use
+data: ml/data/streaks/data.yaml
+epochs: 50
+imgsz: 640
+batch: 16
+seed: 42
+device: cpu                # use 0 for the first CUDA GPU
+workers: 2
+optimizer: auto
+lr0: 0.01
+patience: 15
+mosaic: 1.0
+fliplr: 0.5
+flipud: 0.5                # streaks have no "up"; vertical flips are physically valid
+degrees: 0.0
+scale: 0.5

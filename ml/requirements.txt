@@ -1,0 +1,11 @@
+# Python 3.10 - 3.12. Install CPU-only PyTorch first (smaller download):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+# then:
+#   pip install -r ml/requirements.txt
+ultralytics>=8.3,<8.4
+numpy>=1.24,<3
+opencv-python-headless>=4.8
+pyyaml>=6.0
+onnx>=1.14
+onnxslim>=0.1.30
+onnxruntime>=1.16

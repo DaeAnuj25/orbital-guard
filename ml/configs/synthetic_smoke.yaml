@@ -1,0 +1,12 @@
+# Pipeline smoke test on SYNTHETIC frames (see generate_synthetic.py).
+# Results from this config validate the tooling only - never real-world detection.
+name: synthetic-smoke
+model: yolov8n.pt
+data: ml/data/synthetic/data.yaml
+epochs: 3
+imgsz: 320
+batch: 8
+seed: 42
+device: cpu
+workers: 2
+patience: 5

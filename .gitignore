@@ -1,0 +1,13 @@
+node_modules/
+.next/
+.env
+*.tsbuildinfo
+next-env.d.ts
+# ML artefacts (regenerate with the scripts in ml/)
+ml/data/
+ml/runs/
+ml/**/__pycache__/
+*.pt
+# keep the exported model + metadata and experiment records
+!ml/weights/model.onnx
+!ml/weights/model.json

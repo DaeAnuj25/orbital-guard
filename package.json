@@ -1,0 +1,42 @@
+{
+  "name": "nextjs-postgresql-template",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "db:push": "drizzle-kit push",
+    "ml:synthetic": "python3 ml/scripts/generate_synthetic.py --out ml/data/synthetic --n-train 200 --n-val 50 --n-test 50 --size 512 --seed 42"
+  },
+  "dependencies": {
+    "@types/pngjs": "^6.0.5",
+    "dotenv": "17.3.1",
+    "drizzle-orm": "0.45.2",
+    "jpeg-js": "^0.4.4",
+    "next": "16.2.6",
+    "onnxruntime-node": "^1.30.0",
+    "pg": "8.20.0",
+    "pngjs": "^7.0.0",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "recharts": "^3.10.1",
+    "satellite.js": "^7.1.0",
+    "vitest": "^5.0.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.1.17",
+    "@types/node": "22.19.15",
+    "@types/pg": "8.18.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "drizzle-kit": "0.31.10",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.6",
+    "postcss": "8.5.8",
+    "tailwindcss": "4.1.17",
+    "typescript": "5.9.3"
+  }
+}
